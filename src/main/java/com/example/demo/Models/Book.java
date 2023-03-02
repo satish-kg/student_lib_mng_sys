@@ -20,4 +20,8 @@ public class Book {
     private int pages;
     @Enumerated(EnumType.STRING)
     private Genre genre;
+
+    @ManyToOne
+    @JoinColumn
+    private Author author;
 }
