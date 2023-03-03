@@ -4,13 +4,17 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class AuthorEntryDto {
+public class AuthorResponseDto {
 
     private String name;
-    private String country;
     private int age;
     private double rating;
+    private String country;
+
+    private List<BookResponseDto> booksWritten;
 }

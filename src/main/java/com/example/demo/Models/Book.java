@@ -18,6 +18,7 @@ public class Book {
     private int id;
     private String name;
     private int pages;
+    private boolean isIssued;
     @Enumerated(EnumType.STRING)
     private Genre genre;
 
