@@ -1,7 +1,7 @@
 package com.example.demo.Enums;
 
 public enum CardStatus {
-    ACTIVAED,
+    ACTIVATED,
     DEACTIVAED,
     SUSPENDED,
     EXPIRED;

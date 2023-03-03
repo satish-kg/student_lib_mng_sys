@@ -17,7 +17,7 @@ public class StudentServices {
     public String addStudent(Student student){
 
         Card card = new Card();
-        card.setCardStatus(CardStatus.ACTIVAED);
+        card.setCardStatus(CardStatus.ACTIVATED);
         card.setStudentVariableName(student);
 
         student.setCard(card);
