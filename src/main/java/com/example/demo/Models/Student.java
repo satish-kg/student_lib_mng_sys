@@ -22,6 +22,8 @@ public class Student {
     private String email;
     private String mobile;
     private String country;
+
+    @OneToOne(mappedBy = "studentVariableName", cascade = CascadeType.ALL)
     private Card card;
 
 }

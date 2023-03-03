@@ -28,4 +28,12 @@ public class Transactions {
     private Date transactionDate;
     private boolean isIssueOperation;
 
+    @ManyToOne
+    @JoinColumn
+    private Book book;
+
+    @ManyToOne
+    @JoinColumn
+    private Card card;
+
 }

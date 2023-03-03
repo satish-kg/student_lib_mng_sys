@@ -1,6 +1,8 @@
 package com.example.demo.Services;
 
 import com.example.demo.DTOs.StudentMobUpdateDto;
+import com.example.demo.Enums.CardStatus;
+import com.example.demo.Models.Card;
 import com.example.demo.Models.Student;
 import com.example.demo.Repositories.StudentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,6 +13,19 @@ public class StudentServices {
 
     @Autowired
     StudentRepository studentRepository;
+
+    public String addStudent(Student student){
+
+        Card card = new Card();
+        card.setCardStatus(CardStatus.ACTIVAED);
+        card.setStudentVariableName(student);
+
+        student.setCard(card);
+
+        studentRepository.save(student);
+
+        return "New student and card added.";
+    }
 
 
     public String getStudent (String email){

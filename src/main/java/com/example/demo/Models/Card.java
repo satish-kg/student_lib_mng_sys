@@ -27,5 +27,13 @@ public class Card {
     @Enumerated(EnumType.STRING)
     private CardStatus cardStatus;
 
+    @OneToOne
+    @JoinColumn
+    private Student studentVariableName;
 
+    @OneToMany(mappedBy = "card", cascade = CascadeType.ALL)
+    private Book book;
+
+    @OneToMany(mappedBy = "card", cascade = CascadeType.ALL)
+    private Transactions transactions;
 }
